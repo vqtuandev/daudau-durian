@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/loading.ejs') %>
+    <%- include('../partials/header.ejs') %>
+    <!-- body -->
+    <%- include('../components/common/breadcrumb.ejs', {name: product.name}) %>
+    <!-- Section Shop Single -->
+    <div class="section" data-ntr-shop-single>
+        <div class="container">
+            <div class="grid">
+                <div class="grid_row is-60">
+                    <div class="grid_col is-12 is-lg-5">
+                        <%- include('../components/product/slider.ejs', {images: product.images}) %>
+                    </div>
+                    <div class="grid_col is-12 is-lg-7">
+                        <%- include('../components/product/info.ejs', {...product}) %>
+                    </div>
+                    <div class="grid_col is-12">
+                        <%- include('../components/product/footer.ejs', {...product}) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section Shop Single End -->
+    <!-- end body -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

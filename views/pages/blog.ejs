@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/loading.ejs') %>
+    <%- include('../partials/header.ejs') %>
+    <!-- body -->
+    <div class="section">
+        <div class="container">
+            <!-- Posts -->
+            <div class="grid">
+                <div class="grid_row is-40">
+                    <% articles && articles.forEach(function(article){ %>
+                    <div class="grid_col is-12 is-md-6 is-lg-4" data-aos="ntr-fade-up" data-aos-once="true">
+                        <%- include('../components/blog/blogitem.ejs', {...article}) %>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+            <!-- Posts End -->
+        </div>
+    </div>
+    <!-- end body -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

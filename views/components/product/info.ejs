@@ -1,0 +1,48 @@
+<div class="shop-single_title">
+    <h2><%= name %></h2>
+    <% if (status === 'NEW') {%>
+        <span class="label is-green-light">New</span>
+    <%} else if (status === 'HOT') {%>
+        <span class="label is-purple-light">Hot</span>
+    <%} else if (status === 'OUT_OF_STOCK') {%>
+        <span class="label is-grey">Out of Stock</span>
+    <%} else if (status === 'SALE_OFF') {%>
+        <span class="label is-red-light">Sale</span>
+    <% } %>
+</div>
+<div class="shop-single_rating">
+    <span class="rating">
+        <span class="icon is-star-outline"></span>
+        <span class="icon is-star-outline"></span>
+        <span class="icon is-star-outline"></span>
+        <span class="icon is-star-outline"></span>
+        <span class="icon is-star-outline"></span>
+        <span class="rating_rate" style="width:80%;">
+            <% for(let i = 0; i < rating; i++) { %>
+                <span class="icon is-star"></span>
+            <%}%>
+        </span>
+    </span>
+    <a class="shop-single_rating_reviews" href="#">(3 customer reviews)</a>
+</div>
+<div class="shop-single_price">
+    <% if (oldPrice) {%>
+        <span class="shop-product2_prices_old"> <%= currencyFormatDE(oldPrice)%></span>
+    <%}%>
+    <span class="shop-single_price_current"><%= currencyFormatDE(price)%></span>
+</div>
+<div class="shop-single_description">
+    <p><%= title%></p>
+</div>
+<div class="shop-single_meta">
+    <div class="shop-single_meta_item">
+        <span class="shop-single_meta_item_title">Category:</span>
+        <span class="shop-single_meta_item_value"><a href="#"><%= categoryName %></a></span>
+    </div>
+</div>
+<form class="shop-single_quantity">
+    <input type="text" name="quantity" value="1" data-ntr-ui-spinner='{"min":1, "max":50}'>
+    <button class="button is-grey" type="submit">
+        <span class="button_text">Add to Cart</span>
+    </button>
+</form>

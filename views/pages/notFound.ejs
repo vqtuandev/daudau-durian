@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/loading.ejs') %>
+    <%- include('../partials/header.ejs') %>
+    <!-- body -->
+    <div class="section section-404">
+        <div class="container">
+            <div class="section-404_inner">
+                <div class="section-404_heading">
+                    <h1>Không tìm thấy trang</h1>
+                    <p>Xin lỗi, trang bạn đang muốn truy cập không tồn tại hoặc đã xóa</p>
+                </div>
+<!--                <form class="section-404_search">-->
+<!--                    <input class="section-404_search_input" type="text" name="keyword" placeholder="Search ..." required>-->
+<!--                    <button class="section-404_search_button" type="submit"><span class="icon is-search"></span></button>-->
+<!--                </form>-->
+                <a class="link is-color-secondary" href="home-1.html">
+                    <span class="link_text">Về trang chủ</span>
+                    <span class="link_icon icon is-next"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

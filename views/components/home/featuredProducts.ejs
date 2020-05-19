@@ -1,0 +1,21 @@
+<!-- Section Featured Products -->
+<div class="section">
+    <div class="container">
+        <!-- Heading -->
+        <div class="heading" data-aos="ntr-fade-up" data-aos-once="true">
+            <h2 class="heading_title">Sản phẩm nổi bật</h2>
+<!--            <p class="heading_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+        </div>
+        <!-- Heading End -->
+        <!-- Products -->
+        <div class="grid">
+            <div class="grid_row is-30 is-md-40">
+                <% products && products.forEach(function(product){ %>
+                    <%- include('../common/product.ejs', { ...product }) %>
+                <% }); %>
+            </div>
+        </div>
+        <!-- Products End -->
+    </div>
+</div>
+<!-- Section Featured Products End -->

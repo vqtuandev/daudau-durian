@@ -1,0 +1,24 @@
+<div class="shop-single_photos" data-ntr-lightbox='{"type":"gallery","selector":".shop-single_photos_item"}'>
+    <div class="slick-slider">
+        <% images && images.forEach(function (image) { %>
+            <div class="slick-slide">
+                <a class="shop-single_photos_item" href="<%= image %>" title="Product Name">
+                    <span class="aspect-ratio is-1x1"><img class="aspect-ratio_object lazyload" src="<%= image %>" alt="Product Name"></span>
+                </a>
+            </div>
+        <%})%>
+    </div>
+</div>
+<div class="shop-single_thumbnails">
+    <div class="slick-slider">
+        <% images && images.forEach(function (image) { %>
+            <div class="slick-slide">
+                <div class="shop-single_thumbnails_item">
+                    <span class="aspect-ratio is-1x1">
+                        <img class="aspect-ratio_object lazyload" src="<%= image %>" data-srcset="<%= image%>" alt="Product Name">
+                    </span>
+                </div>
+            </div>
+        <%})%>
+    </div>
+</div>

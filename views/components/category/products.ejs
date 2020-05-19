@@ -1,0 +1,13 @@
+<!-- Products -->
+<div class="shop-products">
+    <div class="grid">
+        <div class="grid_row is-40">
+            <% products && products.forEach(function(product){ %>
+                <div class="grid_col" data-aos="ntr-fade-up" data-aos-once="true">
+                    <%- include('../common/bigProduct.ejs', { ...product }) %>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<!-- Products End -->

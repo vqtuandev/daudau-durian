@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/loading.ejs') %>
+    <%- include('../partials/header.ejs') %>
+    <!-- body -->
+    <div class="section" data-ntr-blog-single>
+        <div class="container">
+            <%- include('../components/article/header.ejs', {...article}) %>
+            <!-- Single Media -->
+            <%- include('../components/article/media.ejs', {...article}) %>
+            <!-- Single Media End -->
+            <!-- Single Body -->
+            <div class="blog-single_body" data-aos="ntr-fade-up" data-aos-once="true">
+                <div class="grid">
+                    <div class="grid_row is-60">
+                        <%- article.description%>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Body End -->
+        </div>
+    </div>
+    <!-- end body -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

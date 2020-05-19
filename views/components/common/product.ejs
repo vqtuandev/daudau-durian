@@ -1,0 +1,54 @@
+<div class="grid_col is-12 is-sm-6 is-lg-4 is-xl-6" data-aos="ntr-fade-up" data-aos-once="true">
+    <!-- Product -->
+    <div class="shop-product2 hover-shadow">
+        <div class="shop-product2_labels">
+            <% if (status === 'NEW') {%>
+                <span class="label is-green-light">New</span>
+            <%} else if (status === 'HOT') {%>
+                <span class="label is-purple-light">Hot</span>
+            <%} else if (status === 'OUT_OF_STOCK') {%>
+                <span class="label is-grey">Out of Stock</span>
+            <%} else if (status === 'SALE_OFF') {%>
+                <span class="label is-red-light">Sale</span>
+            <% } %>
+        </div>
+        <div class="shop-product2_photo">
+            <a href="shop-single-1.html">
+                <span class="aspect-ratio is-1x1">
+                    <img class="aspect-ratio_object lazyload" src="<%= thumbnailUrl%>" alt="Product Name">
+                </span>
+            </a>
+        </div>
+        <div class="shop-product2_body">
+            <div class="shop-product2_title">
+                <a href="shop-single-1.html"><%= name%></a>
+            </div>
+            <div class="shop-product2_rating">
+                <span class="rating">
+                    <span class="icon is-star-outline"></span>
+                    <span class="icon is-star-outline"></span>
+                    <span class="icon is-star-outline"></span>
+                    <span class="icon is-star-outline"></span>
+                    <span class="icon is-star-outline"></span>
+                    <span class="rating_rate" style="width:80%;">
+                        <% for(let i = 0; i < rating; i++) { %>
+                            <span class="icon is-star"></span>
+                        <%}%>
+                    </span>
+                </span>
+            </div>
+            <div class="shop-product2_prices">
+                <% if (oldPrice) {%>
+                    <span class="shop-product2_prices_old"> <%= currencyFormatDE(oldPrice)%></span>
+                <%}%>
+                <span class="shop-product2_prices_current"><%= currencyFormatDE(price)%></span>
+            </div>
+        </div>
+        <div class="shop-product2_actions">
+            <a class="shop-product2_actions_item" href="#" title="Add to Cart"><span class="icon is-bag"></span></a>
+            <a class="shop-product2_actions_item" href="#" title="Quick View"><span class="icon is-search"></span></a>
+            <a class="shop-product2_actions_item" href="#" title="Add to Wishlist"><span class="icon is-heart"></span></a>
+        </div>
+    </div>
+    <!-- Product End -->
+</div>

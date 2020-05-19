@@ -1,0 +1,18 @@
+<!-- Post -->
+<div class="blog-post">
+    <a class="blog-post_photo" href="/blog/<%= id %>">
+        <span class="aspect-ratio is-4x3">
+            <img class="aspect-ratio_object lazyload" src="<%= thumbnail %>" data-srcset="<%= thumbnail%> 1x, <%= thumbnail%> 2x" alt="<%= title %>">
+        </span>
+    </a>
+    <h3 class="blog-post_title"><a href="/blog/<%= id %>"><%= title %></a></h3>
+    <p class="blog-post_meta"><%- dateFormat(createdAt)%></p>
+    <p class="blog-post_summary"><%= briefInfo %></p>
+    <p class="blog-post_readmore">
+        <a class="link is-color-secondary" href="/blog/<%= id %>">
+            <span class="link_text">Chi tiết</span>
+            <span class="link_icon icon is-next"></span>
+        </a>
+    </p>
+</div>
+<!-- Post End -->
